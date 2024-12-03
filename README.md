@@ -11,7 +11,7 @@
 - [Pending Enhancements](#pending-enhancements)
 - [Development Notes](#development-notes)
 - [Contributing](#contributing)
-- [License](#license)
+- [License & Contributions](#license)
 
 ---
 
@@ -108,7 +108,7 @@ src/
 2. Designing modular, scalable selectors and reducers for flexibility in task management.
 3. Future Directions: Add comprehensive test suites to improve code reliability and ease of extension.
 
-## License & Contributions
+## License
 
 Contributions are welcome! Please fork the repository, create a feature branch, and submit a pull request for review.
 Feel free to clone, modify and distribute this repo.
