@@ -1,0 +1,48 @@
+.session-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+.session-container:nth-child(odd) {
+    background-color: rgba(0, 0, 0, .2); 
+}
+
+.session-container:nth-child(even) {
+    background-color: rgba(0, 0, 0, .1);
+}
+
+.session-col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 5px;
+}
+
+.session-id {
+    font-size: 1.2em;
+    padding: 5px;
+    height: 100%;
+}
+
+.session-dates {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 100%;
+    border-left: 2px solid#ccc;
+    border-right: 2px solid #ccc;
+    gap: 5px;
+}
+
+.session-date {
+    display: flex;
+    width: 100%;
+    padding-left: 5px;
+}
+
+.session-time {
+
+}

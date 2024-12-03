@@ -1,0 +1,75 @@
+.task-container {
+    display: flex;
+    background-color: var(--list-item-background-color);
+    border-radius: 2px;
+    padding: 10px;
+}
+
+.task-row {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+}
+
+.task-col-side {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    height: 100%;
+    padding-top: 5px;
+}
+
+.task-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+
+.start-button {
+    all: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border: 2px solid var(--button-border-color);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: border-color 0.3s ease, transform 0.2s ease;
+}
+
+.start-button:hover {
+    border-color: var(--button-hover-border-color);
+    transform: scale(1.1);
+}
+
+.start-button-icon {
+    width: 12px;
+    height: 12px;
+    color: var(--button-text-color);
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.start-button:hover .start-button-icon {
+    color: var(--button-hover-text-color);
+}
+
+.task-name {
+    font-size: .9em;
+    font-weight: 700;
+}
+.subs-item {
+    font-size: .6em;
+}
+.task-time {
+    font-size: .7em;
+}
+
+.total-time {
+    font-size: .7em;
+}

@@ -1,0 +1,83 @@
+.circular-timer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: var(--pomodoro-width);
+    height: var(--pomodoro-height);
+
+    max-width: var(--pomodoro-width-max);
+    max-height: var(--pomodoro-height-max);
+
+    border-radius: 50%;
+    text-align: center;
+}
+
+.task-title {
+    font-size: .8rem; 
+    margin-bottom: .3rem;
+}
+
+.timer {
+    font-size: 2.5rem;
+    margin-bottom: .4rem;
+}
+
+.progress-ring {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: var(--pomodoro-width);
+    height: var(--pomodoro-height);
+
+    max-width: var(--pomodoro-width-max);
+    max-height: var(--pomodoro-height-max);
+    
+    transform: rotate(-90deg);
+}
+
+.progress-ring-background {
+    fill: none;
+    stroke:var(--pomodoro-bar-background-color);
+    stroke-width: 1;
+}
+
+.progress-ring-progress {
+    fill: none;
+    stroke: var(--pomodoro-bar-color);
+    stroke-width: 1;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 0.3s ease;
+}
+
+.clock-button {
+    all: unset;
+    display: flex;
+    cursor: pointer;
+    z-index: 10;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid white;
+    border-radius: 50%;
+    transition: border-color 0.3s ease, transform 0.2s ease;
+}
+.clock-button-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.break-button {
+    all: unset;
+    z-index: 10;
+    cursor: pointer;
+    color:white;
+    padding: 7.5px;
+    margin: 5px;
+    border-radius: 5px;
+    border: solid 1px white;
+}

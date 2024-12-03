@@ -1,0 +1,29 @@
+.header-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+.header-title {
+    width: 100%;
+    font-size:.7em;
+    color: var(--text-secondary-color);
+}
+.header-title-span {
+    font-size: 1.4em !important;
+    font-weight: 700;
+}
+.header-today-color {
+    color: var(--text-today-color);
+}
+.header-yesterday-color {
+    color: var(--text-yesterday-color);
+}
+.header-default-color {
+    color: var(--text-default-color);
+}
+.header-row {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}

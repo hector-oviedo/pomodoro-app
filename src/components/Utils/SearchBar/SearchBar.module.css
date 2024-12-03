@@ -1,0 +1,31 @@
+.search-bar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid var(--text-primary-color);
+}
+
+.search-input {
+  all:unset;
+  flex: 1;
+  font-size: 1rem;
+  padding: 1rem;
+  padding-bottom: .5rem;
+}
+
+.search-input::placeholder {
+  color: var(--text-secondary-color);
+  font-size: .8em;
+}
+
+.search-icon {
+  width: 20px;
+  height: 20px;
+  color: var(--text-primary-color);
+  padding-right: 1rem;
+  cursor: pointer;
+}
+
+.search-bar:focus-within {
+  border-bottom-color:var(--input-focus-color);
+}

@@ -1,0 +1,74 @@
+.task-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    align-items: center;
+    gap: .5em;
+}
+
+.task-body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: .5em;
+}
+
+.task-name {
+    font-size: 1.2em;
+}
+
+.notes {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid var(--text-primary-color);
+}
+
+.notes-input {
+    all:unset;
+    flex: 1;
+    font-size: 1rem;
+    padding: 0;
+    padding-top: .3rem;
+    padding-bottom: .3rem;
+}
+
+.notes-input::placeholder {
+    color: var(--text-secondary-color);
+    font-size: .8em;
+}
+
+.notes:focus-within {
+    border-bottom-color: var(--input-focus-color);
+}
+
+.remove-cell {
+    display: flex;
+    flex:1;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.remove-button {
+    all:unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--remove-button-border);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.remove-icon {
+    width: 24px;
+    height: 24px;
+    color:  var(--remove-button-color);
+    transition: transform 0.2s ease;
+}
+
+.remove-button:hover {
+    transform: scale(1.1);
+}

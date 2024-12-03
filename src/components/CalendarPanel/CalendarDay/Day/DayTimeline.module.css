@@ -1,0 +1,19 @@
+.timeline-container {
+    display: flex;
+    width: 100%;
+    margin:0 0 5px 0;
+    align-items:center;
+}
+.timeline-bar {
+    height: 8px;
+    border-radius: 5px;
+    background-color: white;
+    width: 100%;
+}
+.total-time {
+    padding: 5px;
+    padding-left:20px;
+    padding-bottom: 9px;
+    font-size: 1.5em;
+    font-weight: 100;
+}

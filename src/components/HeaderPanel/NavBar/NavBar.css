@@ -1,0 +1,13 @@
+.nav-bar {
+  all: unset;
+  display: flex;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: .8rem;
+  width: 100%;
+
+  border-bottom: 1px solid var(--text-primary-color) !important;
+}
+
+.nav-item-selected {
+  border-bottom: 3px solid var(--text-primary-color) !important;
+}

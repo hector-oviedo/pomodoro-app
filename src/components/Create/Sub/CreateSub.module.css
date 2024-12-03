@@ -1,0 +1,81 @@
+.sub-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding: 20px;
+    background-color: transparent !important;
+}
+.sub-header {
+    all: unset;
+    width: 100%;
+    font-size: 1.2em;
+}
+.sub-body {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form-field label {
+    font-size: 0.9rem;
+    font-weight: 300;
+    margin-bottom: 5px;
+    color: var(--text-primary-color);
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    all: unset;
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 1rem;
+    border-bottom: 1px solid var(--text-secondary-color);
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+.form-field input::placeholder,
+.form-field textarea::placeholder,
+.form-field input:focus::placeholder,
+.form-field textarea:focus::placeholder{
+    color:var(--text-secondary-color);
+}
+.form-field input:focus,
+.form-field textarea:focus {
+    border-bottom: 1px solid var(--input-focus-color);
+}
+
+.sub-footer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: end;
+}
+
+.sub-button {
+    all: unset;
+
+    cursor: pointer;
+
+    color:var(--button-text-color);
+    padding: 7.5px;
+    margin: 5px;
+    border-radius: 5px;
+    border: solid 1px var(--button-border-color);
+    transition: border-color 0.3s ease, transform 0.2s ease;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.sub-button:hover {
+    color: var(--button-hover-text-color);
+    border-color: var(--button-hover-border-color);
+}

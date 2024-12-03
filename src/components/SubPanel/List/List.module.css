@@ -1,0 +1,16 @@
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.group-title {
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--text-secondary-color);
+}
+.group-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+}

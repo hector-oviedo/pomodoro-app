@@ -1,0 +1,24 @@
+.status-icon {
+  all: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  width: 100%;
+}
+
+.status-icon-empty {
+  width: 20px;
+  height: 20px;
+  color: var(--empty-status-color);
+}
+.status-icon-progress {
+  width: 20px;
+  height: 20px;
+  color: var(--progress-status-color);
+}
+.status-icon-completed {
+  width: 20px;
+  height: 20px;
+  color: var(--completed-status-color);
+}

@@ -1,0 +1,7 @@
+.nav-item {
+    all: unset;
+    cursor: pointer;
+    padding: 10px;
+    color: var(--primary-text-color);
+    border-bottom: 3px solid rgba(0,0,0,0) !important;
+}

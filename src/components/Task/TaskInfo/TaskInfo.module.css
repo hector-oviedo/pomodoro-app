@@ -1,0 +1,75 @@
+.task-info-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    height: 100%;
+}
+
+.info-left, .info-action, .info-state {
+    width: 100%;
+}
+
+.info-left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.info-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.action-button-container {
+    padding: 5px;
+}
+
+.info-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-state-time {
+    padding: 5px;
+}
+
+.info-state-icon {
+    padding: 5px
+}
+
+.task-button-container {
+    padding: 1em 0;
+    width: 100%;
+}
+.task-button {
+    all: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border: 2px solid var(--button-border-color);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: border-color 0.3s ease, transform 0.2s ease;
+}
+
+.task-button-icon {
+    width: 24px;
+    height: 24px;
+    color: var(--button-text-color);
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+  
+.task-button:hover {
+    border-color:var(--button-hover-border-color);
+    transform: scale(1.1);
+}
+
+.task-button:hover .task-button-icon {
+    color:var(--button-hover-text-color);
+}

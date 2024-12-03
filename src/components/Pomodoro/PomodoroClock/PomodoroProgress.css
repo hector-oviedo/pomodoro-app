@@ -1,0 +1,21 @@
+.progress-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+}
+.progress-item-complete {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(36, 236, 126);
+    border: solid 1px white;
+}
+.progress-item {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(236, 126, 36);
+    border: solid 1px white;
+}
