@@ -99,14 +99,14 @@ src/
 - [x] Local Storage: Persist tasks and settings across sessions to eliminate reliance on keeping the app open.
 - [x] Add Management button in Subs: Add the button to manage (create, delete) at the Subs Panel component.
 - [x] Tasks: Add "no entries" or similar when there are no tasks created at Calendar Panel component.
-- [ ] Timeline Visualization: Enhanced day-by-day task timelines for improved scheduling.
-- [ ] Infrastructure as Code (IaC): Automate deployment using Terraform.
+- [x] Improve styles of the sessions tracking visuals in Pomodoro component.
 - [ ] Dockerfile: Add Docker support for consistent and portable builds.
 - [ ] Add alternatives of how to run the App.
 - [ ] Create the test suits.
-- [ ] Dont forget to modify `data/time.js` when finish debugging!.
+- [ ] Timeline Visualization: Enhanced day-by-day task timelines for improved scheduling.
+- [ ] Infrastructure as Code (IaC): Automate deployment using Terraform.
 - [ ] Add a config panel to edit colors, times and other possible set ups of the App.
-- [ ] Improve styles of the sessions tracking visuals in Pomodoro component.
+- [ ] Dont forget to modify `data/time.js` when finish debugging!.
 
 ## Development Notes
 - Scalability: The app transitioned to a dynamic architecture for flexibility. Categories and projects were unified into a single reducer for simplicity and maintainability.

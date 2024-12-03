@@ -5,17 +5,44 @@
     padding: 10px;
     gap: 10px;
 }
+
+.progress-item,
 .progress-item-complete {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
-    background-color: rgb(36, 236, 126);
-    border: solid 1px white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px var(--text-primary-color);
+    position: relative;
 }
-.progress-item {
+
+.progress-item::after,
+.progress-item-complete::after {
+    content: '';
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background-color: rgb(236, 126, 36);
-    border: solid 1px white;
+    display: block;
+}
+
+.progress-item::after {
+    background-color: var(--progress-status-color);
+}
+
+.progress-item-complete::after {
+    background-color: var(--completed-status-color);
+    animation: pulse 0.5s ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.8);
+        opacity: 0.6;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
