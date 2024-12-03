@@ -1,6 +1,6 @@
-# Pomodoro UI
+# Pomodoro App
 
-**Pomodoro UI** is a highly modularized Pomodoro tracking system that helps users maintain focus and track tasks efficiently. It offers robust functionality, including task management, Pomodoro session tracking, and dynamic categorization.
+**Pomodoro App** is a highly modularized Pomodoro tracking system that helps users maintain focus and track tasks efficiently. It offers robust functionality, including task management, Pomodoro session tracking, and dynamic categorization.
 
 ## Table of Contents
 
@@ -96,10 +96,12 @@ src/
 
 ## Pending Enhancements
 
-- Local Storage: Persist tasks and settings across sessions to eliminate reliance on keeping the app open.
-- Timeline Visualization: Enhanced day-by-day task timelines for improved scheduling.
-- Infrastructure as Code (IaC): Automate deployment using tools like Terraform.
-- Dockerfile: Add Docker support for consistent and portable builds.
+- [x] Local Storage: Persist tasks and settings across sessions to eliminate reliance on keeping the app open.
+- [x] Add Management button in Subs: Add the button to manage (create, delete) at the Subs Panel component.
+- ~~ No Tasks: Add "no entries" or similar when there are no tasks created at Calendar Panel component.
+- [x] Timeline Visualization: Enhanced day-by-day task timelines for improved scheduling.
+- [x] Infrastructure as Code (IaC): Automate deployment using tools like Terraform.
+- [x] Dockerfile: Add Docker support for consistent and portable builds.
 
 ## Development Notes
 - Scalability: The app transitioned to a dynamic architecture for flexibility. Categories and projects were unified into a single reducer for simplicity and maintainability.

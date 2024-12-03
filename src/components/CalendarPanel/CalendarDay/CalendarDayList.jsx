@@ -19,6 +19,7 @@ export const CalendarDayList = () => {
                     )
                 })
             }
+            { Days.length === 0 ? <div className={styles['no-entries']}>No Entries</div>: '' }
         </section>
     )
 }
