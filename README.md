@@ -104,6 +104,9 @@ src/
 - [ ] Dockerfile: Add Docker support for consistent and portable builds.
 - [ ] Add alternatives of how to run the App.
 - [ ] Create the test suits.
+- [ ] Dont forget to modify `data/time.js` when finish debugging!.
+- [ ] Add a config panel to edit colors, times and other possible set ups of the App.
+- [ ] Improve styles of the sessions tracking visuals in Pomodoro component.
 
 ## Development Notes
 - Scalability: The app transitioned to a dynamic architecture for flexibility. Categories and projects were unified into a single reducer for simplicity and maintainability.
