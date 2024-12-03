@@ -19,8 +19,6 @@ export const PomodoroClock = () => {
     
     const [ SessionStart, setSessionStart ] = useState(null);
 
-    const [ SessionEnd, setSessionEnd ] = useState(null);
-
     const [ Touched, setTouched ] = useState(false);
 
     const [ FocusMode, setFocusMode ] = useState(true);
@@ -32,28 +30,23 @@ export const PomodoroClock = () => {
     }
 
     const onComplete = () => {
-        if (FocusMode) {
-            setSessionEnd(new Date())
-            saveSession();
-        }
+        if (FocusMode) saveSession();
     }
 
     const saveSession = () => {
-            //save session
-            const id = Task.id;
-            const sessionData = {
-                start: SessionStart,
-                end: SessionEnd,
-                pauses: 0,
-                totalTime: PomodoroTime,
-            };
-            tasksDispatch({ type: 'COMPLETE_SESSION', payload: { id, sessionData } });
+        //save session
+        const id = Task.id;
+        const sessionData = {
+            start: SessionStart,
+            end: new Date(),
+            pauses: 0,
+            totalTime: PomodoroTime,
+        };
+        tasksDispatch({ type: 'COMPLETE_SESSION', payload: { id, sessionData } });
     }
 
     const onHandleClick = () => {
         if (FocusMode) {
-            setSessionEnd(new Date());
-            
             //next step is: break
             setFocusMode(false);
 
