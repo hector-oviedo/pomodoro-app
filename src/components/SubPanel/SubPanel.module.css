@@ -1,6 +1,52 @@
 .subs-container {
-    padding: .1em 1.5em;
+    padding: 15px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.bar-row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.bar-search {
+    width: 100%;
+}
+
+.bar-button {
+    
+}
+
+.sub-button-container {
+    padding: 5px;
+}
+.sub-button {
+    all: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--button-border-color);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: border-color 0.3s ease, transform 0.2s ease;
+}
+
+.sub-button:hover {
+    border-color: var(--button-hover-border-color);
+    transform: scale(1.05);
+}
+
+.sub-button-icon {
+    width: 22px;
+    height: 22px;
+    color: var(--button-text-color);
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.sub-button:hover .sub-button-icon {
+    color: var(--button-hover-text-color);
 }

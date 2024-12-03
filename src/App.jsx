@@ -35,7 +35,8 @@ export const App =() => {
                         key={sub.id}
                         path={`${sub.navigation}`}
                         element={<SubPanel
-                            subId={sub.id} />}
+                            subId={sub.id}
+                            navigation={sub.navigation}/>}
                     />
                 ))}
 
@@ -44,7 +45,7 @@ export const App =() => {
                         key={`${sub.id}-create`}
                         path={`${sub.navigation}/create`}
                         element={<CreateSub
-                            subId={sub.id} />}
+                            subId={sub.id}/>}
                     />
                 ))}
             </Routes>
