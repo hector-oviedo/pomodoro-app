@@ -96,7 +96,7 @@ src/
 
 ## Pending Enhancements
 
-- [ ] Local Storage: Persist tasks and settings across sessions to eliminate reliance on keeping the app open.
+- [x] Local Storage: Persist tasks and settings across sessions to eliminate reliance on keeping the app open.
 - [ ] Add Management button in Subs: Add the button to manage (create, delete) at the Subs Panel component.
 - [x] Tasks: Add "no entries" or similar when there are no tasks created at Calendar Panel component.
 - [ ] Timeline Visualization: Enhanced day-by-day task timelines for improved scheduling.

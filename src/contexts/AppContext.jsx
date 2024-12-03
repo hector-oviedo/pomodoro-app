@@ -1,4 +1,4 @@
-import { createContext, useContext, useReducer, useState } from 'react';
+import { createContext, useContext, useEffect, useReducer, useState } from 'react';
 
 //import { tasksSample } from '../data/TasksSample';
 
@@ -12,11 +12,15 @@ import { POMODORO_BREAK_TIME, POMODORO_FINISH_BREAK_TIME, POMODORO_TIME } from '
 const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
-    const [ TasksState, tasksDispatch ] = useReducer(taskReducer, []);
+    const getInitialTasks = () => JSON.parse(localStorage.getItem('tasks')) || [];
 
-    const [ SubsState, subsDispatch ] = useReducer(subReducer, subs);
+    const getInitialSubs = () => JSON.parse(localStorage.getItem('subs')) || subs;
 
-    const [ SectionsState, setSectionsState ] = useState([...sections, ...subs]);
+    const [ TasksState, tasksDispatch ] = useReducer(taskReducer, getInitialTasks());
+
+    const [ SubsState, subsDispatch ] = useReducer(subReducer, getInitialSubs());
+
+    const [ SectionsState, setSectionsState ] = useState([...sections, ...getInitialSubs()]);
 
     const [ PomodoroTime ] = useState(POMODORO_TIME);
 
@@ -44,7 +48,14 @@ export const AppProvider = ({ children }) => {
         return '/' + SectionsState.find(section => section.id === sectionId).navigation || '';
     }
     
-    
+    useEffect(() => {
+        localStorage.setItem('tasks', JSON.stringify(TasksState));
+    }, [TasksState]);
+
+    useEffect(() => {
+        localStorage.setItem('subs', JSON.stringify(SubsState));
+    }, [SubsState]);
+
     return (
         <AppContext.Provider value={{
             SectionsState,
