@@ -65,6 +65,22 @@ For testing:
 - Task Operations: Add, remove, or modify tasks.
 - Subsection Management: Manage Categories (default 'Categories' and 'Projects' defined at `src/data/Subs.js`) by adding and removing them.
 
+### With docker
+
+To run the Pomodoro App with Docker, ensure Docker Desktop is installed and running.
+
+1. Build the Docker image:
+
+   ```bash
+   docker build -t pomodoro-app .
+   ```
+
+1. Run the container in production mode:
+
+   ```bash
+   docker run -p 80:80 pomodoro-app
+   ```
+
 ## Project Structure
 
 ```
@@ -100,8 +116,9 @@ src/
 - [x] Add Management button in Subs: Add the button to manage (create, delete) at the Subs Panel component.
 - [x] Tasks: Add "no entries" or similar when there are no tasks created at Calendar Panel component.
 - [x] Improve styles of the sessions tracking visuals in Pomodoro component.
-- [ ] Dockerfile: Add Docker support for consistent and portable builds.
-- [ ] Add alternatives of how to run the App.
+- [x] Dockerfile: Add Docker support for consistent and portable builds.
+- [x] Add alternatives of how to run the App.
+- [ ] Pomodoro Background color: Change background at pomodoro focus moment, and break moment.
 - [ ] Create the test suits.
 - [ ] Timeline Visualization: Enhanced day-by-day task timelines for improved scheduling.
 - [ ] Infrastructure as Code (IaC): Automate deployment using Terraform.
