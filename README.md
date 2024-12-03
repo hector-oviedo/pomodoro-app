@@ -123,7 +123,7 @@ src/
 - [ ] Timeline Visualization: Enhanced day-by-day task timelines for improved scheduling.
 - [ ] Infrastructure as Code (IaC): Automate deployment using Terraform.
 - [ ] Add a config panel to edit colors, times and other possible set ups of the App.
-- [ ] Dont forget to modify `data/time.js` when finish debugging!.
+- [x] Dont forget to modify `data/time.js` when finish debugging!.
 
 ## Development Notes
 - Scalability: The app transitioned to a dynamic architecture for flexibility. Categories and projects were unified into a single reducer for simplicity and maintainability.
