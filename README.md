@@ -11,6 +11,7 @@
 - [Pending Enhancements](#pending-enhancements)
 - [Development Notes](#development-notes)
 - [Contributing](#contributing)
+- [Screenshots](#screenshots)
 - [License & Contributions](#license)
 
 ---
@@ -133,6 +134,28 @@ src/
 1. Consolidating Pomodoro and break states while ensuring stability.
 2. Designing modular, scalable selectors and reducers for flexibility in task management.
 3. Future Directions: Add comprehensive test suites to improve code reliability and ease of extension.
+
+## Screenshots
+
+Some screenshots of the App:
+
+### Home Screen
+![Home Screen](./screenshots/img1.jpg)
+
+### Task Creation
+![Task Creation](./screenshots/img2.jpg)
+
+### Categories View
+![Categories View](./screenshots/img3.jpg)
+
+### Pomodoro Timer
+![Pomodoro Timer](./screenshots/img4.jpg)
+
+### Calendar View
+![Calendar View](./screenshots/img5.jpg)
+
+### Progress Overview
+![Progress Overview](./screenshots/img6.jpg)
 
 ## License
 
