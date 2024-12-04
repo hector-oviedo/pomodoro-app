@@ -11,6 +11,16 @@ export const subs = [
                 id:0,
                 name:'Others',
                 deletable:false,
+            },
+            {
+                id:1,
+                name:'Work',
+                deletable:true,
+            },
+            {
+                id:2,
+                name:'Studies',
+                deletable:true,
             }]
     },
     {
@@ -25,6 +35,16 @@ export const subs = [
                 id:0,
                 name:'Others',
                 deletable:false,
+            },
+            {
+                id:1,
+                name:'Google',
+                deletable:true,
+            },
+            {
+                id:2,
+                name:'AWS',
+                deletable:true,
             }]
     },
 ];

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAppContext } from '../../../contexts/AppContext';
 import { getActiveTask, getTaskStatus } from '../../../selectors/tasksSelector';
@@ -7,8 +7,14 @@ import { ClockComponent } from '../ClockComponent/ClockComponent';
 import { PomodoroInfo } from './PomodoroInfo';
 import { PomodoroProgress } from './PomodoroProgress';
 
+import focusSoundFile from '/sounds/clockSound.mp3';
+import breakSoundFile from '/sounds/clockSound.mp3';
+
 import styles from './PomodoroClock.module.css';
 export const PomodoroClock = () => {
+    const focusAudioRef = useRef(new Audio(focusSoundFile));
+    const breakAudioRef = useRef(new Audio(breakSoundFile));
+
     const navigate = useNavigate();
     
     const { TasksState, tasksDispatch, getSectionPath, PomodoroTime, PomodoroBreakTime, PomodoroFinishBreakTime } = useAppContext();
@@ -31,6 +37,16 @@ export const PomodoroClock = () => {
 
     const onComplete = () => {
         if (FocusMode) saveSession();
+
+        if (FocusMode) {
+            focusAudioRef.current.play().catch((error) => {
+                console.error('Error playing focus sound:', error);
+            });
+        } else {
+            breakAudioRef.current.play().catch((error) => {
+                console.error('Error playing break sound:', error);
+            });
+        }
     }
 
     const saveSession = () => {
@@ -114,6 +130,18 @@ export const PomodoroClock = () => {
         const newStatus = getTaskStatus(TasksState,Task.id);
         setTaskStatus(newStatus);
     }, [TasksState]);
+
+    useEffect(() => {
+        document.title = FocusMode
+            ? `Pomodoro [${ActualTime}]`
+            : `Break [${ActualTime}]`;
+    }, [ActualTime, FocusMode]);
+
+    useEffect(() => {
+        return () => {
+            document.title = "Pomodoro App";
+        };
+    })
 
     return (
         <section className={styles['pomodoro-container']}>

@@ -25,6 +25,7 @@ export const DayHeader = ({day}) => {
             <div className={styles['header-row']}>
                 <DayTimeline
                     timeline=""
+                    tasks={day.tasks}
                     totalTime={totalTime}/>
             </div>
             

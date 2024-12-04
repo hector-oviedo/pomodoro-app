@@ -118,6 +118,8 @@ src/
 - [x] Improve styles of the sessions tracking visuals in Pomodoro component.
 - [x] Dockerfile: Add Docker support for consistent and portable builds.
 - [x] Add alternatives of how to run the App.
+- [x] Add sounds on clock finish in pomodoro mode.
+- [x] Change tab title when in pomodoro panel with the timing of focus/break clock, for better visualization.
 - [ ] Pomodoro Background color: Change background at pomodoro focus moment, and break moment.
 - [ ] Create the test suits.
 - [ ] Timeline Visualization: Enhanced day-by-day task timelines for improved scheduling.

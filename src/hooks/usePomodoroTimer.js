@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useTimer } from './useTimer';
 
 import { convertSecondsToVisual, calculatePercentage } from '../helpers/formatFields';
-export const usePomodoroTimer = (initialValue = 59, onTick, onComplete) => {
+export const usePomodoroTimer = (initialValue, onTick, onComplete) => {
 
     const onCompleteHandler = () => {
         setActualState('COMPLETED')

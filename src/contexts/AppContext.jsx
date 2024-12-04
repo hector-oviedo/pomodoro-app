@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useReducer, useState } from 'react';
 
-//import { tasksSample } from '../data/TasksSample';
+import { tasksSample } from '../data/TasksSample';
 
 import { sections } from '../data/Sections';
 import { subs } from '../data/Subs';
@@ -12,9 +12,9 @@ import { POMODORO_BREAK_TIME, POMODORO_FINISH_BREAK_TIME, POMODORO_TIME } from '
 const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
-    const getInitialTasks = () => JSON.parse(localStorage.getItem('tasks')) || [];
+    const getInitialTasks = () => tasksSample;
 
-    const getInitialSubs = () => JSON.parse(localStorage.getItem('subs')) || subs;
+    const getInitialSubs = () => subs;
 
     const [ TasksState, tasksDispatch ] = useReducer(taskReducer, getInitialTasks());
 

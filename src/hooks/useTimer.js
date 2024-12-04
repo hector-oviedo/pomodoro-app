@@ -1,39 +1,65 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from 'react';
 
 export const useTimer = (initialTime, onTick, onComplete) => {
     if (initialTime < 1) throw new Error("Initial time must be higher than 1 second");
 
     const [ActualSecond, setActualSecond] = useState(initialTime);
-
     const [Active, setActive] = useState(false);
+    const endTimeRef = useRef(null);
+    const savedOnTick = useRef(onTick);
+    const savedOnComplete = useRef(onComplete);
 
     useEffect(() => {
-        if (!Active) return;
+        savedOnTick.current = onTick;
+    }, [onTick]);
 
-        const interval = setInterval(() => {
-            setActualSecond((prevSecond) => {
-                if (prevSecond <= 1) {
-                    clearInterval(interval);
-                    setActive(false);
-                    if (onComplete) onComplete();
-                    return 0;
-                } else {
-                    if (onTick) onTick(prevSecond - 1);
-                    return prevSecond - 1;
-                }
-            });
-        }, 1000);
+    useEffect(() => {
+        savedOnComplete.current = onComplete;
+    }, [onComplete]);
 
-        return () => clearInterval(interval);
+    useEffect(() => {
+        let timerId;
+
+        const tick = () => {
+            if (!Active) return;
+
+            const timeLeft = Math.max(0, Math.round((endTimeRef.current - Date.now()) / 1000));
+            setActualSecond(timeLeft);
+
+            if (timeLeft <= 0) {
+                setActive(false);
+                if (savedOnComplete.current) savedOnComplete.current();
+            } else {
+                if (savedOnTick.current) savedOnTick.current(timeLeft);
+                timerId = setTimeout(tick, 250);
+            }
+        };
+
+        if (Active) {
+            tick();
+        }
+
+        return () => {
+            clearTimeout(timerId);
+        };
     }, [Active]);
 
     const doStart = (totalTime) => {
         setActualSecond(totalTime);
+        endTimeRef.current = Date.now() + totalTime * 1000;
         setActive(true);
     };
 
     const doPause = (isPausing) => {
-        setActive(!isPausing);
+        if (isPausing) {
+            setActive(false);
+            const timeLeft = Math.max(0, Math.ceil((endTimeRef.current - Date.now()) / 1000));
+            setActualSecond(timeLeft);
+        } else {
+            // Resuming
+            endTimeRef.current = Date.now() + ActualSecond * 1000;
+            setActive(true);
+        }
     };
 
     return {
