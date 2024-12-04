@@ -14,7 +14,7 @@ export const SearchBar = ({ onSearch }) => {
             <input
                 type="text"
                 className={styles['search-input']}
-                placeholder="Search Project"
+                placeholder="Search Task"
                 value={Value}
                 onChange={onHandleChange}
             />
